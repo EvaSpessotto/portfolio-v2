@@ -1,0 +1,70 @@
+@import "../variables.scss";
+
+.about {
+  margin-top: 200px;
+  margin-bottom: 10%;
+
+  .header-about {
+    h1 {
+      font-family: $font;
+      color: black;
+      font-weight: $bold;
+      font-size: 4em;
+    }
+    @media (max-width: $sm) {
+      h1 {
+        font-size: 3em;
+      }
+    }
+
+    .line {
+      height: 10px;
+      background: black;
+    }
+  }
+
+  .pres-about {
+    font-family: $font;
+    color: black;
+    font-size: 1.2em;
+
+    .underline {
+      color: black;
+      text-decoration: none;
+      background-repeat: no-repeat;
+      background-size: 100% 0.2em;
+      background-position: 0 88%;
+      transition: background-size 200ms ease-in;
+      &:hover {
+        background-size: 100% 88%;
+      }
+    }
+
+    .yellow-underline {
+      @extend .underline;
+      background-image: linear-gradient(
+        86deg,
+        rgba(255, 180, 0, 1) 0%,
+        rgba(255, 180, 0, 1) 100%
+      );
+    }
+
+    .red-underline {
+      @extend .underline;
+      background-image: linear-gradient(
+        86deg,
+        rgba(198, 0, 0, 1) 0%,
+        rgba(198, 0, 0, 1) 100%
+      );
+    }
+
+    .blue-underline {
+      @extend .underline;
+      background-image: linear-gradient(
+        86deg,
+        rgba(0, 133, 155, 1) 0%,
+        rgba(0, 133, 155, 1) 100%
+      );
+    }
+  }
+}
