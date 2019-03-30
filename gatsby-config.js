@@ -4,5 +4,5 @@ module.exports = {
     siteUrl: `eva-spessotto.fr`,
     description: `Developpeuse web et graphiste juniore`,
   },
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-netlify-cms`],
 }
