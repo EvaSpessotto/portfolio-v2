@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import { Container, Row, Col } from "reactstrap"
 import "./contact.scss"
 import socialLinks from "../socialLinks"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo/Seo"
