@@ -1,7 +1,9 @@
 import React, { Component } from "react"
 import { Container, Row, Col } from "reactstrap"
 import "./about.scss"
+
 import Layout from "../components/Layout"
+import Seo from "../components/Seo/Seo"
 
 class about extends Component {
   render() {
@@ -18,6 +20,7 @@ class about extends Component {
     }
     return (
       <Layout>
+        <Seo pathname="/about" />
         <Container className="about">
           <Row>
             <Col lg="6" xs="12" className="header-about">

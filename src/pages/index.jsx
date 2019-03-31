@@ -4,10 +4,12 @@ import { Link } from "gatsby"
 import { Container, Row, Col } from "reactstrap"
 
 import Layout from "../components/Layout"
+import Seo from "../components/Seo/Seo"
 
 const homepage = () => {
   return (
     <Layout>
+      <Seo />
       <Container className="home">
         <Row>
           <Col lg="8" sm="8" xs="12">
