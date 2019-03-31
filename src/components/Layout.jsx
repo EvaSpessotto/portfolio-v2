@@ -1,7 +1,4 @@
 import React from "react"
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHeart } from "@fortawesome/free-solid-svg-icons"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Header from "./Header"
@@ -14,5 +11,3 @@ export default ({ children }) => (
     <Footer />
   </div>
 )
-
-library.add(faHeart)

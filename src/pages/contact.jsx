@@ -5,12 +5,14 @@ import socialLinks from "../socialLinks"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../components/Layout"
+import Seo from "../components/Seo/Seo"
 import ContactForm from "../components/Contact/ContactForm"
 
 class contact extends Component {
   render() {
     return (
       <Layout>
+        <Seo pathname="/contact" />
         <Container id="contact-links">
           <Row>
             <Col lg="6" className="offset-lg-3">

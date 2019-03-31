@@ -1,7 +1,7 @@
-// @flow
 import * as React from "react"
 import { Container, Row, Col } from "reactstrap"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import "./footer.scss"
+import socialLinks from "../socialLinks"
 
 export default class Footer extends React.Component {
   render() {
@@ -14,16 +14,25 @@ export default class Footer extends React.Component {
         </Row>
         <Row>
           <Col className="text-center my-3">
-            <a href="" target="_blank" rel="noopener noreferrer">
-              {/* <span className={`${link.class} mx-3`}>{link.name}</span> */}
-            </a>
+            {socialLinks.map((link, key) => {
+              return (
+                <a
+                  href={link.link}
+                  key={key}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className={`${link.class} mx-3`}>{link.name}</span>
+                </a>
+              )
+            })}
           </Col>
         </Row>
         <Row>
           <Col className="text-center">
             <p className="small-text">
               {`Tous droits réservés © ${new Date().getFullYear()}`} | Fait avec{" "}
-              <FontAwesomeIcon icon="heart" /> par Eva Spessotto
+              <i className="fa fa-heart" /> par Eva Spessotto
             </p>
           </Col>
         </Row>

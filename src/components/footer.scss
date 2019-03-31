@@ -1,0 +1,45 @@
+@import "../variables.scss";
+
+#footer {
+  .line {
+    @extend %line;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+
+    span {
+      font-family: $font;
+      font-weight: $bold;
+    }
+
+    .github {
+      transition: ease-in-out 0.2s;
+      &:hover {
+        transition: ease-in 0.2s;
+        color: $blue;
+      }
+    }
+
+    .behance {
+      transition: ease-in-out 0.2s;
+      &:hover {
+        transition: ease-in 0.2s;
+        color: $yellow;
+      }
+    }
+
+    .linkedin {
+      transition: ease-in-out 0.2s;
+      &:hover {
+        transition: ease-in 0.2s;
+        color: $red;
+      }
+    }
+  }
+
+  .small-text {
+    font-family: $font;
+    font-size: 0.8rem;
+  }
+}
