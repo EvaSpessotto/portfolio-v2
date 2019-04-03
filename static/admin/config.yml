@@ -19,18 +19,13 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Description, name: description, widget: string }
-      - { label: Thumbnail, name: Thumbnail, widget: image }
-      - { label: Cover Image, name: Cover, widget: image }
-      - { label: Banner Image, name: Banner, widget: image }
-      - { label: Devices Image, name: Devices, widget: image }
+      - { label: Thumbnail, name: thumbnail, widget: image }
+      - { label: Cover Image, name: cover, widget: image }
+      - { label: Banner Image, name: banner, widget: image }
+      - { label: Devices Image, name: devices, widget: image }
       - {
           label: Images,
           name: images,
-          widget: object,
-          fields:
-            [
-              { label: Image 1, name: image 1, widget: image },
-              { label: Image 2, name: image 2, widget: image },
-              { label: Image 3, name: image 3, widget: image },
-            ],
+          widget: list,
+          fields: [{ name: image, label: Image, widget: image }],
         }
