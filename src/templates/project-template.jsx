@@ -29,17 +29,8 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        title
-        description
         thumbnail
-        cover
-        banner
-        devices
-        images {
-          image1
-          image2
-          image3
-        }
+        title
       }
     }
   }
