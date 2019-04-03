@@ -17,10 +17,6 @@ export default function Template({ data }) {
       />
       <Container text style={{ marginTop: "5%", marginBottom: "5%" }}>
         <h1>{post.frontmatter.title}</h1>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
       </Container>
     </Layout>
   )
