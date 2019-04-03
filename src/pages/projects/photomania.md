@@ -8,13 +8,12 @@ description: >-
   en photo ou encore des tutoriels pour retoucher vos clichés. Besoin
   d’inspiration ? La galerie est là pour ça, n’hésitez pas à vous perdre dans
   les nombreux clichés afin de trouver votre prochain projet photo !
-Thumbnail: /images/cover-photomania.png
-Cover: /images/cover-photomania.png
-Banner: /images/banner-photomania.png
-Devices: /images/devices-photomania.png
+thumbnail: /images/cover-photomania.png
+cover: /images/cover-photomania.png
+banner: /images/banner-photomania.png
+devices: /images/devices-photomania.png
 images:
-  image 1: /images/macbook-photomania.png
-  image 2: /images/pages-photomania.png
-  image 3: /images/cover-photomania.png
+  image1: /images/macbook-photomania.png
+  image2: /images/pages-photomania.png
+  image3: /images/cover-photomania.png
 ---
-
