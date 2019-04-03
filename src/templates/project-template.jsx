@@ -1,11 +1,11 @@
 import React from "react"
-import "./blog-post.scss"
-import { Container, Header } from "semantic-ui-react"
+import { Container } from "reactstrap"
 import { graphql } from "gatsby"
 import Seo from "../components/Seo/Seo"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 
 export default function Template({ data }) {
+  const { markdownRemark: post } = data
   return (
     <Layout>
       <Seo
@@ -16,7 +16,7 @@ export default function Template({ data }) {
         article
       />
       <Container text style={{ marginTop: "5%", marginBottom: "5%" }}>
-        <Header as="h1">{post.frontmatter.title}</Header>
+        <h1>{post.frontmatter.title}</h1>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -26,25 +26,25 @@ export default function Template({ data }) {
   )
 }
 
-// export const pageQuery = graphql`
-//   query projectBySlug($slug: String!) {
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       fields {
-//         slug
-//       }
-//       frontmatter {
-//         title
-//         description
-//         thumbnail
-//         cover
-//         banner
-//         devices
-//         images {
-//           image1
-//           image2
-//           image3
-//         }
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query projectBySlug($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        description
+        thumbnail
+        cover
+        banner
+        devices
+        images {
+          image1
+          image2
+          image3
+        }
+      }
+    }
+  }
+`
