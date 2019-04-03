@@ -31,8 +31,14 @@ class ContactForm extends Component {
         </Row>
         <Row className="mt-4">
           <Col lg="6" className="offset-lg-3">
-            <Form>
+            <Form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
               <FormGroup className="name blue-line mt-4">
+                <Input type="hidden" name="bot-field" />
                 <Label for="name">nom</Label>
                 <Input
                   type="text"
