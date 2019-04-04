@@ -36,6 +36,7 @@ class ContactForm extends Component {
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              action="/success"
             >
               <FormGroup className="name blue-line mt-4">
                 <Input type="hidden" name="bot-field" />
@@ -43,8 +44,6 @@ class ContactForm extends Component {
                 <Input
                   type="text"
                   name="name"
-                  onChange={this.onChange}
-                  value={this.state.name}
                   className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
                 />
               </FormGroup>
@@ -54,8 +53,6 @@ class ContactForm extends Component {
                 <Input
                   type="email"
                   name="email"
-                  onChange={this.onChange}
-                  value={this.state.email}
                   className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
                 />
               </FormGroup>
@@ -65,8 +62,6 @@ class ContactForm extends Component {
                 <Input
                   type="text"
                   name="subject"
-                  onChange={this.onChange}
-                  value={this.state.subject}
                   className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
                 />
               </FormGroup>
@@ -76,8 +71,6 @@ class ContactForm extends Component {
                 <Input
                   type="textarea"
                   name="message"
-                  onChange={this.onChange}
-                  value={this.state.message}
                   rows="8"
                   className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
                 />

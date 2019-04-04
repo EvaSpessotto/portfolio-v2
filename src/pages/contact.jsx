@@ -37,7 +37,6 @@ class contact extends Component {
             </Col>
           </Row>
         </Container>
-
         <ContactForm />
       </Layout>
     )
