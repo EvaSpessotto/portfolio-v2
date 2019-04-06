@@ -36,7 +36,6 @@ class ContactForm extends Component {
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              action="/success/"
             >
               <FormGroup className="name blue-line mt-4">
                 <Input type="hidden" name="bot-field" />
