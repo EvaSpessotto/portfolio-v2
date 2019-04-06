@@ -37,17 +37,16 @@ class ContactForm extends Component {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <input
-                type="text"
-                name="name"
-                className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
-              />
-              {/* <FormGroup className="name blue-line mt-4">
+              <input type="text" name="name" placeholder="your name" />
+              <button className="submit-btn mt-5">Envoyer</button>
+            </form>
+
+            {/* <FormGroup className="name blue-line mt-4">
                 <Input type="hidden" name="bot-field" />
                 <Label for="name">nom</Label>
                 
               </FormGroup> */}
-              {/* 
+            {/* 
               <FormGroup className="red-line">
                 <Label for="email">email</Label>
                 <Input
@@ -75,8 +74,6 @@ class ContactForm extends Component {
                   className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
                 />
               </FormGroup> */}
-              <button className="submit-btn mt-5">Envoyer</button>
-            </form>
           </Col>
         </Row>
       </Container>
