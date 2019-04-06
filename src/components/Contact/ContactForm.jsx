@@ -31,22 +31,23 @@ class ContactForm extends Component {
         </Row>
         <Row className="mt-4">
           <Col lg="6" className="offset-lg-3">
-            <Form
+            <form
               name="contact"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <FormGroup className="name blue-line mt-4">
+              <input
+                type="text"
+                name="name"
+                className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
+              />
+              {/* <FormGroup className="name blue-line mt-4">
                 <Input type="hidden" name="bot-field" />
                 <Label for="name">nom</Label>
-                <Input
-                  type="text"
-                  name="name"
-                  className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
-                />
-              </FormGroup>
-
+                
+              </FormGroup> */}
+              {/* 
               <FormGroup className="red-line">
                 <Label for="email">email</Label>
                 <Input
@@ -73,11 +74,9 @@ class ContactForm extends Component {
                   rows="8"
                   className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
                 />
-              </FormGroup>
-              <button className="submit-btn mt-5" type="submit">
-                Envoyer
-              </button>
-            </Form>
+              </FormGroup> */}
+              <button className="submit-btn mt-5">Envoyer</button>
+            </form>
           </Col>
         </Row>
       </Container>
