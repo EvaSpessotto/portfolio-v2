@@ -37,7 +37,6 @@ class ContactForm extends Component {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <input type="hidden" name="bot-field" />
               <input type="text" name="name" placeholder="your name" />
               <button className="submit-btn mt-5" type="submit">
                 Envoyer
