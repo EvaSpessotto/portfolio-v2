@@ -13,7 +13,7 @@ const success = () => {
       </Container> */}
       <Container className="text-center success-page">
         <Row className="animated-squares d-flex justify-content-center">
-          <Col lg="1" xs="1" className="m-0">
+          <Col lg="1" xs="3" md="3" className="m-0">
             <div className="black m-0" />
           </Col>
         </Row>
