@@ -33,7 +33,7 @@ const ContactForm = () => {
               <textarea name="message" id="message" rows="6" required />
             </div>
             <div>
-              <input type="submit" value="Drop a line" />
+              <input type="submit" value="Send" />
               <input type="reset" value="Eraser" />
             </div>
           </form>
