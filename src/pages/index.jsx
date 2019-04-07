@@ -42,12 +42,12 @@ const homepage = ({ data }) => {
         <Row>
           {projects &&
             projects.map((project, index) => {
-              console.log(project.node)
               return (
                 <Col
                   lg="4"
                   md="6"
                   sm="12"
+                  key={index}
                   className="d-flex justify-content-center"
                 >
                   <Link to={project.node.fields.slug}>
