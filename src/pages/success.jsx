@@ -5,12 +5,9 @@ import { Container, Row, Col } from "reactstrap"
 
 import Layout from "../components/Layout"
 
-const success = () => {
+const Success = () => {
   return (
     <Layout>
-      {/* <Container className="animated-squares">
-        
-      </Container> */}
       <Container className="text-center success-page">
         <Row className="animated-squares d-flex justify-content-center">
           <Col lg="1" xs="3" md="3" className="m-0">
@@ -38,4 +35,4 @@ const success = () => {
     </Layout>
   )
 }
-export default success
+export default Success
