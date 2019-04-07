@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { Container, Row, Col, Form, FormGroup, Label, Input } from "reactstrap"
 
 const ContactForm = () => {
@@ -12,25 +12,6 @@ const ContactForm = () => {
       </Row>
       <Row className="mt-4">
         <Col lg="6" className="offset-lg-3">
-          {/* <form>
-            <div>
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div>
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="6" required />
-            </div>
-            <div>
-              <input type="submit" value="Send" />
-              <input type="reset" value="Eraser" />
-            </div>
-          </form> */}
-
           <Form
             name="contact"
             method="post"
@@ -76,7 +57,7 @@ const ContactForm = () => {
                 className="border-top-0 border-right-0 border-left-0 rounded-0 p-0"
               />
             </FormGroup>
-            <button className="submit-btn mt-5" type="submit">
+            <button className="black-btn mt-5" type="submit">
               Envoyer
             </button>
           </Form>
