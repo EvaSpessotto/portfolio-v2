@@ -5,7 +5,7 @@
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  max-width: 100%;
+  max-width: 100% !important;
 
   .animated-squares {
     %square {
