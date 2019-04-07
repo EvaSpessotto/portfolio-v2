@@ -10,6 +10,23 @@ $sm: 768px;
 $md: 992px;
 $lg: 1200px;
 
+%btn {
+  color: white;
+  background-color: black;
+  font-family: $font;
+  font-weight: $bold;
+  font-size: 1.2em;
+  padding: 10px 30px 10px 30px;
+  border: none;
+  border-radius: none;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(0.9);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+}
+
 // Animation carrés Home
 @keyframes rounded {
   from {
@@ -20,7 +37,6 @@ $lg: 1200px;
     border-radius: 100px;
   }
 }
-// Animation carrés Home
 
 %line {
   height: 10px;
@@ -52,5 +68,24 @@ $lg: 1200px;
   }
   85% {
     transform: (rotate(-5deg));
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: black;
+    border-radius: 0px;
+  }
+  33% {
+    background-color: $yellow;
+    border-radius: 100px;
+  }
+  66% {
+    background-color: $red;
+    border-radius: 0px;
+  }
+  100% {
+    background-color: $blue;
+    border-radius: 100px;
   }
 }
