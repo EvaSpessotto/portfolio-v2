@@ -9,7 +9,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,6 +48,20 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Eva Spessotto`,
+        short_name: `Eva S`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        icon: `static/favicon.ico`,
+        include_favicon: true,
+      },
+    },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
   ],
 }
