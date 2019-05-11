@@ -1,5 +1,5 @@
 ---
-title: Photomania
+title: Wildhub
 description: >-
   Photomania est un projet réalisé pendant ma formation avec deux autres
   personnes. Nous avons fait un blog sur le thème de la photographie qui
