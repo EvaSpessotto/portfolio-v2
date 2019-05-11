@@ -12,8 +12,4 @@ thumbnail: /images/cover-photomania.png
 cover: /images/cover-photomania.png
 banner: /images/banner-photomania.png
 devices: /images/devices-photomania.png
-images:
-  image1: /images/macbook-photomania.png
-  image2: /images/pages-photomania.png
-  image3: /images/cover-photomania.png
 ---
