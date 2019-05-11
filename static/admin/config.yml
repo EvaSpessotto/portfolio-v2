@@ -5,6 +5,8 @@ backend:
 media_folder: static/images
 public_folder: images
 
+publish_mode: editorial_workflow
+
 slug:
   encoding: "ascii"
   clean_accents: true
