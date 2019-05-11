@@ -1,12 +1,13 @@
 import React from "react"
 import "./index.scss"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { Container, Row, Col } from "reactstrap"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo/Seo"
 
-const homepage = () => {
+const homepage = ({ data }) => {
+  const { edges: projects } = data.allMarkdownRemark
   return (
     <Layout>
       <Seo />
@@ -39,33 +40,26 @@ const homepage = () => {
 
       <Container className="projects-list">
         <Row>
-          <Col lg="4" md="6" sm="12" className="d-flex justify-content-center">
-            <Link to="/">
-              <img
-                src="http://via.placeholder.com/640x360"
-                className="mb-5 img-fluid rounded-circle"
-                alt=""
-              />
-            </Link>
-          </Col>
-          <Col lg="4" md="6" sm="12" className="d-flex justify-content-center">
-            <Link to="/">
-              <img
-                src="http://via.placeholder.com/640x360"
-                className="mb-5 img-fluid rounded-circle"
-                alt=""
-              />
-            </Link>
-          </Col>
-          <Col lg="4" md="6" sm="12" className="d-flex justify-content-center">
-            <Link to="/">
-              <img
-                src="http://via.placeholder.com/640x360"
-                className="mb-5 img-fluid rounded-circle"
-                alt=""
-              />
-            </Link>
-          </Col>
+          {projects &&
+            projects.map((project, index) => {
+              return (
+                <Col
+                  lg="4"
+                  md="6"
+                  sm="12"
+                  key={index}
+                  className="d-flex justify-content-center"
+                >
+                  <Link to={project.node.fields.slug}>
+                    <img
+                      src={project.node.frontmatter.thumbnail}
+                      className="mb-5 img-fluid rounded-circle"
+                      alt=""
+                    />
+                  </Link>
+                </Col>
+              )
+            })}
         </Row>
       </Container>
     </Layout>
@@ -73,3 +67,20 @@ const homepage = () => {
 }
 
 export default homepage
+
+export const homePageQuery = graphql`
+  query thumbnailProjects {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___title] }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            thumbnail
+          }
+        }
+      }
+    }
+  }
+`

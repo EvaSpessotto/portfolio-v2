@@ -1,17 +1,31 @@
 backend:
   name: github
-  repo: evaspessotto/portfolio-v2
+  repo: EvaSpessotto/portfolio-v2
 
 media_folder: static/images
 public_folder: images
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
-  - name: project
-    label: Projects
-    folder: Projects
+  - name: "projects"
+    label: "Projects"
+    folder: src/pages/projects
+    slug: "{{slug}}"
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Thumbnail, name: thumbnail, widget: image }
+      - { label: Cover Image, name: cover, widget: image }
+      - { label: Banner Image, name: banner, widget: image }
+      - { label: Devices Image, name: devices, widget: image }
+      - {
+          label: Images,
+          name: images,
+          widget: list,
+          fields: [{ name: image, label: Image, widget: image }],
+        }

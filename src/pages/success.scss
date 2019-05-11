@@ -1,0 +1,38 @@
+@import "../variables.scss";
+
+.success-page {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  max-width: 100% !important;
+
+  .animated-squares {
+    %square {
+      width: 100%;
+    }
+
+    %square:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .black {
+      @extend %square;
+      background-color: black;
+      animation: rainbow ease-in-out 5s infinite alternate;
+    }
+  }
+
+  h1 {
+    font-family: $font;
+    font-weight: $bold;
+  }
+  p {
+    font-family: $font;
+  }
+  .black-btn {
+    @extend %btn;
+  }
+}
