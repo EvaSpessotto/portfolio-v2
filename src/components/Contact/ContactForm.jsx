@@ -14,12 +14,13 @@ const ContactForm = () => {
         <Col lg="6" className="offset-lg-3">
           <Form
             name="contact"
-            method="post"
-            action="/success/"
+            method="POST"
+            action="/success"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
 
             <FormGroup className="name blue-line mt-4">
               <Label for="name">nom</Label>
