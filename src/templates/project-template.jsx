@@ -1,8 +1,10 @@
 import React from "react"
-import { Container } from "reactstrap"
+import { Container, Row, Col } from "reactstrap"
 import { graphql } from "gatsby"
+
 import Seo from "../components/Seo/Seo"
 import Layout from "../components/Layout"
+import HeroPost from "../components/posts/HeroPost"
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
@@ -15,9 +17,30 @@ export default function Template({ data }) {
         pathname={post.fields.slug}
         article
       />
-      <Container text style={{ marginTop: "5%", marginBottom: "5%" }}>
-        <h1>{post.frontmatter.title}</h1>
+      <HeroPost banner={post.frontmatter.banner} />
+
+      <Container>
+        <Row>
+          <Col>
+            <h1 className="mt-5">{post.frontmatter.title}</h1>
+            <p>{post.frontmatter.description}</p>
+          </Col>
+        </Row>
       </Container>
+
+      {post.frontmatter.listImages.map(item => {
+        return (
+          <Container fluid>
+            <Row>
+              <Col>
+                <h2> {item.title}</h2>
+                <p>{item.description}</p>
+                <img src={item.image} alt={item.title} className="w-100" />
+              </Col>
+            </Row>
+          </Container>
+        )
+      })}
     </Layout>
   )
 }
@@ -30,7 +53,14 @@ export const pageQuery = graphql`
       }
       frontmatter {
         thumbnail
+        banner
         title
+        description
+        listImages {
+          image
+          title
+          description
+        }
       }
     }
   }

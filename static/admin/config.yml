@@ -25,7 +25,14 @@ collections:
       - { label: Devices Image, name: devices, widget: image }
       - {
           label: Images,
-          name: images,
+          name: listImages,
+          required: false,
           widget: list,
-          fields: [{ name: image, label: Image, widget: image }],
+          fields:
+            [
+              { name: image, label: Image, widget: image },
+              { name: title, label: Titre, widget: string },
+              { name: description, label: Description, widget: text },
+              { name: bgColor, label: Background, widget: string },
+            ],
         }
