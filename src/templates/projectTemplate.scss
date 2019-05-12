@@ -1,6 +1,12 @@
 @import "../variables.scss";
 
 .project-container {
+  .project-header {
+    font-weight: bold;
+  }
+  .project-title {
+    font-weight: bold;
+  }
   .container-blue {
     background: $blue;
   }

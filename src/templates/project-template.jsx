@@ -24,8 +24,9 @@ export default function Template({ data }) {
         <Container>
           <Row>
             <Col>
-              <h1 className="mt-5">{post.frontmatter.title}</h1>
+              <h1 className="mt-5 project-header">{post.frontmatter.title}</h1>
               <p>{post.frontmatter.description}</p>
+              <img src={post.frontmatter.devices} alt="" className="w-100" />
             </Col>
           </Row>
         </Container>
@@ -35,7 +36,7 @@ export default function Template({ data }) {
             <Container fluid className={`container-${item.bgColor} p-5`}>
               <Row>
                 <Col>
-                  <h2> {item.title}</h2>
+                  <h2 className="project-title"> {item.title}</h2>
                   <p>{item.description}</p>
                   <img
                     src={item.image}
@@ -63,6 +64,7 @@ export const pageQuery = graphql`
         thumbnail
         banner
         title
+        devices
         description
         listImages {
           image
