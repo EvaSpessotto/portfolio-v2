@@ -27,6 +27,23 @@ export default function Template({ data }) {
           </Col>
         </Row>
       </Container>
+
+      {post.frontmatter.listImages.map(image => {
+        return (
+          <Container fluid>
+            <Row>
+              <Col>
+                <h2>{image.title}</h2>
+                <div className="line" />
+                <img
+                  src={image.image}
+                  style={{ maxWidth: "100%", maxHeight: "500px" }}
+                />
+              </Col>
+            </Row>
+          </Container>
+        )
+      })}
     </Layout>
   )
 }
@@ -42,6 +59,12 @@ export const pageQuery = graphql`
         banner
         title
         description
+        listImages {
+          image
+          title
+          text
+          isColoured
+        }
       }
     }
   }

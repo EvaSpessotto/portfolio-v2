@@ -14,8 +14,13 @@ banner: /images/banner-photomania.png
 devices: /images/devices-photomania.png
 listImages:
   - image: /images/saint-cyp-06-test.jpg
-    title: Test
+		title: Test
+		text: >-
+		Qui tempor amet laborum qui nisi elit nulla voluptate sunt amet adipisicing labore. Fugiat proident culpa voluptate consectetur eiusmod magna qui. Veniam cupidatat minim proident dolore magna reprehenderit incididunt magna mollit amet esse enim cupidatat. Sunt non nulla adipisicing culpa veniam consectetur do anim excepteur tempor incididunt reprehenderit proident amet. Reprehenderit et anim enim duis et irure cillum ipsum exercitation veniam ex elit fugiat. Consequat aliquip sit id ex mollit dolore officia quis.
+		isColoured: false
   - image: /images/saint-cyp-06-test.jpg
-    title: test 2
+		title: test 2
+		text: >-
+		Qui tempor amet laborum qui nisi elit nulla voluptate sunt amet adipisicing labore. Fugiat proident culpa voluptate consectetur eiusmod magna qui. Veniam cupidatat minim proident dolore magna reprehenderit incididunt magna mollit amet esse enim cupidatat. Sunt non nulla adipisicing culpa veniam consectetur do anim excepteur tempor incididunt reprehenderit proident amet. Reprehenderit et anim enim duis et irure cillum ipsum exercitation veniam ex elit fugiat. Consequat aliquip sit id ex mollit dolore officia quis.
+		isColoured: true
 ---
-

@@ -32,7 +32,14 @@ collections:
           widget: list,
           fields:
             [
-              { name: image, label: Image, widget: image },
               { name: title, label: Titre, widget: string },
+              { name: text, label: Texte, widget: text, required: false },
+              { name: image, label: Image, widget: image },
+              {
+                name: isColoured,
+                label: Background coloré ?,
+                widget: boolean,
+                default: false,
+              },
             ],
         }
