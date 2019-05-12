@@ -13,9 +13,16 @@ cover: /images/cover-photomania.png
 banner: /images/banner-photomania.png
 devices: /images/devices-photomania.png
 listImages:
-  - image: /images/saint-cyp-06-test.jpg
-    title: Test
-  - image: /images/saint-cyp-06-test.jpg
-    title: test 2
+  - description: >-
+      En utilisant les dernières technologies, nous co-créons avec vous
+      l’outil que vous attendez à partir de vos besoins, vos retours
+      utilisateurs et tous les éléments qui interviendront en cours de
+      projet.
+    image: /images/saint-cyp-06-test.jpg
+    title: Applications web sur-mesure
+  - description: >-
+      Nous vous accompagnons pour créer ou améliorer votre boutique, pour vous
+      aider non seulement à vendre plus, mais surtout, mieux !
+    image: /images/saint-cyp-06-test.jpg
+    title: E-commerce
 ---
-
