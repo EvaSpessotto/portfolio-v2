@@ -1,0 +1,13 @@
+@import "../variables.scss";
+
+.project-container {
+  .container-blue {
+    background: $blue;
+  }
+  .container-red {
+    background: $red;
+  }
+  .container-yellow {
+    background: $yellow;
+  }
+}
