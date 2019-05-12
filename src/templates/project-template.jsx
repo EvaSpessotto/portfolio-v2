@@ -30,12 +30,17 @@ export default function Template({ data }) {
 
       {post.frontmatter.listImages.map(item => {
         return (
-          <Container fluid>
+          <Container fluid style={{ background: `${item.bgColor}` }}>
             <Row>
               <Col>
                 <h2> {item.title}</h2>
                 <p>{item.description}</p>
-                <img src={item.image} alt={item.title} className="w-100" />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-100"
+                  style={{ maxHeight: "400px" }}
+                />
               </Col>
             </Row>
           </Container>
@@ -60,6 +65,7 @@ export const pageQuery = graphql`
           image
           title
           description
+          bgColor
         }
       }
     }
