@@ -20,7 +20,6 @@ export default function Template({ data }) {
       />
       <div className="project-container">
         <HeroPost banner={post.frontmatter.banner} />
-
         <Container>
           <Row>
             <Col>
@@ -36,14 +35,11 @@ export default function Template({ data }) {
             <Container fluid className={`container-${item.bgColor} p-5`}>
               <Row>
                 <Col>
-                  <h2 className="project-title"> {item.title}</h2>
-                  <p>{item.description}</p>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-100"
-                    style={{ maxHeight: "400px" }}
-                  />
+                  <Container>
+                    <h2 className="project-title"> {item.title}</h2>
+                    <p>{item.description}</p>
+                    <img src={item.image} alt={item.title} className="w-100" />
+                  </Container>
                 </Col>
               </Row>
             </Container>

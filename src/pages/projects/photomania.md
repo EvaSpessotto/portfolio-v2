@@ -14,11 +14,10 @@ banner: /images/banner-photomania.png
 devices: /images/devices-photomania.png
 listImages:
   - bgColor: blue
-    image: /images/saint-cyp-06-test.jpg
+    image: /images/pages-photomania.png
     title: Test
-    description: lalal
+
   - bgColor: white
-    image: /images/saint-cyp-06-test.jpg
+    image: /images/macbook-photomania.png
     title: test 2
-    description: ddd
 ---
