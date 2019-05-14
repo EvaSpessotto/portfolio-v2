@@ -1,5 +1,6 @@
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -18,7 +19,17 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              thumbnail
+              thumbnail {
+                childImageSharp {
+                  fluid {
+                    src
+                    srcSet
+                    aspectRatio
+                    sizes
+                    originalName
+                  }
+                }
+              }
             }
           }
         }
@@ -43,6 +54,9 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
+
+  // Sert pour l'optimisation des images
+  fmImagesToRelative(node)
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })

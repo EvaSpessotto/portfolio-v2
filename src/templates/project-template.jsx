@@ -1,6 +1,7 @@
 import React from "react"
 import "./projectTemplate.scss"
 import { Container, Row, Col } from "reactstrap"
+import Image from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Seo from "../components/Seo/Seo"
@@ -19,13 +20,17 @@ export default function Template({ data }) {
         article
       />
       <div className="project-container">
-        <HeroPost banner={post.frontmatter.banner} />
+        <HeroPost {...post.frontmatter.title} />
         <Container>
           <Row>
             <Col>
               <h1 className="mt-5 project-header">{post.frontmatter.title}</h1>
               <p>{post.frontmatter.description}</p>
-              <img src={post.frontmatter.devices} alt="" className="w-100" />
+              <Image
+                fluid={post.frontmatter.devices.childImageSharp.fluid}
+                alt=""
+                className="w-100"
+              />
             </Col>
           </Row>
         </Container>
@@ -38,7 +43,11 @@ export default function Template({ data }) {
                   <Container>
                     <h2 className="project-title"> {item.title}</h2>
                     <p>{item.description}</p>
-                    <img src={item.image} alt={item.title} className="w-100" />
+                    <Image
+                      fluid={item.image.childImageSharp.fluid}
+                      alt={item.title}
+                      className="w-100"
+                    />
                   </Container>
                 </Col>
               </Row>
@@ -57,13 +66,37 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        thumbnail
-        banner
         title
-        devices
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        banner {
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        devices {
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         description
         listImages {
-          image
+          image {
+            childImageSharp {
+              fluid(maxWidth: 900) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           title
           description
           bgColor
