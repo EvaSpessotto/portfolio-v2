@@ -32,5 +32,12 @@ collections:
             [
               { name: image, label: Image, widget: image },
               { name: title, label: Titre, widget: string },
+              {
+                name: description,
+                label: Description,
+                widget: text,
+                required: false,
+              },
+              { name: bgColor, label: Background, widget: string },
             ],
         }

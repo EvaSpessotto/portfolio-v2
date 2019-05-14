@@ -1,6 +1,7 @@
 import React from "react"
 import "./index.scss"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 import { Container, Row, Col } from "reactstrap"
 
 import Layout from "../components/Layout"
@@ -48,11 +49,13 @@ const homepage = ({ data }) => {
                   md="6"
                   sm="12"
                   key={index}
-                  className="d-flex justify-content-center"
+                  className="justify-content-center"
                 >
                   <Link to={project.node.fields.slug}>
-                    <img
-                      src={project.node.frontmatter.thumbnail}
+                    <Image
+                      fluid={
+                        project.node.frontmatter.thumbnail.childImageSharp.fluid
+                      }
                       className="mb-5 img-fluid rounded-circle"
                       alt=""
                     />
@@ -77,7 +80,13 @@ export const homePageQuery = graphql`
             slug
           }
           frontmatter {
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 900) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

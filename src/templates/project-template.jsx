@@ -1,5 +1,7 @@
 import React from "react"
+import "./projectTemplate.scss"
 import { Container, Row, Col } from "reactstrap"
+import Image from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Seo from "../components/Seo/Seo"
@@ -17,16 +19,42 @@ export default function Template({ data }) {
         pathname={post.fields.slug}
         article
       />
-      <HeroPost banner={post.frontmatter.banner} />
+      <div className="project-container">
+        <HeroPost {...post.frontmatter.title} />
+        <Container>
+          <Row>
+            <Col>
+              <h1 className="mt-5 project-header">{post.frontmatter.title}</h1>
+              <p>{post.frontmatter.description}</p>
+              <Image
+                fluid={post.frontmatter.devices.childImageSharp.fluid}
+                alt=""
+                className="w-100"
+              />
+            </Col>
+          </Row>
+        </Container>
 
-      <Container>
-        <Row>
-          <Col>
-            <h1 className="mt-5">{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.description}</p>
-          </Col>
-        </Row>
-      </Container>
+        {post.frontmatter.listImages.map(item => {
+          return (
+            <Container fluid className={`container-${item.bgColor} p-5`}>
+              <Row>
+                <Col>
+                  <Container>
+                    <h2 className="project-title"> {item.title}</h2>
+                    <p>{item.description}</p>
+                    <Image
+                      fluid={item.image.childImageSharp.fluid}
+                      alt={item.title}
+                      className="w-100"
+                    />
+                  </Container>
+                </Col>
+              </Row>
+            </Container>
+          )
+        })}
+      </div>
     </Layout>
   )
 }
@@ -38,10 +66,41 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        thumbnail
-        banner
         title
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        banner {
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        devices {
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         description
+        listImages {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 900) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          title
+          description
+          bgColor
+        }
       }
     }
   }
