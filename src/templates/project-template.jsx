@@ -10,6 +10,7 @@ import HeroPost from "../components/posts/HeroPost"
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
+  console.log(post.frontmatter.title)
   return (
     <Layout>
       <Seo
@@ -20,7 +21,7 @@ export default function Template({ data }) {
         article
       />
       <div className="project-container">
-        <HeroPost {...post.frontmatter.title} />
+        <HeroPost title={post.frontmatter.title.toLowerCase()} />
         <Container>
           <Row>
             <Col>
