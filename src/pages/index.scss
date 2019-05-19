@@ -35,25 +35,25 @@
     .black {
       @extend %square;
       background-color: black;
-      animation: rounded ease-in-out 2s 1s infinite alternate;
+      animation: rounded ease-in-out 2s infinite alternate;
     }
 
     .blue {
       @extend %square;
       background-color: $blue;
-      animation: rounded ease-in-out 2s 2s infinite alternate;
+      animation: rounded ease-in-out 2s 0.5s infinite alternate;
     }
 
     .yellow {
       @extend %square;
       background-color: $yellow;
-      animation: rounded ease-in-out 2s 3s infinite alternate;
+      animation: rounded ease-in-out 2s 1s infinite alternate;
     }
 
     .red {
       @extend %square;
       background-color: $red;
-      animation: rounded ease-in-out 2s 4s infinite alternate;
+      animation: rounded ease-in-out 2s 1.5s infinite alternate;
     }
   }
 }

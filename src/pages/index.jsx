@@ -3,6 +3,7 @@ import "./index.scss"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { Container, Row, Col } from "reactstrap"
+import Fade from "react-reveal/Fade"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo/Seo"
@@ -15,25 +16,29 @@ const homepage = ({ data }) => {
       <Container className="home">
         <Row>
           <Col lg="8" sm="8" xs="12">
-            <h1 className="home-message">
-              Bonjour, je suis Eva ; développeuse web junior & graphiste
-            </h1>
-            <div className="line mt-3" />
+            <Fade left>
+              <h1 className="home-message">
+                Bonjour, je suis Eva ; développeuse web junior & graphiste
+              </h1>
+              <div className="line mt-3" />
+            </Fade>
             <Container className="animated-squares">
-              <Row>
-                <Col lg="3" xs="3" className="m-0">
-                  <div className="black m-0" />
-                </Col>
-                <Col lg="3" xs="3" className="m-0">
-                  <div className="blue m-0" />
-                </Col>
-                <Col lg="3" xs="3" className="m-0">
-                  <div className="yellow" />
-                </Col>
-                <Col lg="3" xs="3" className="m-0">
-                  <div className="red" />
-                </Col>
-              </Row>
+              <Fade bottom>
+                <Row>
+                  <Col lg="3" xs="3" className="m-0">
+                    <div className="black m-0" />
+                  </Col>
+                  <Col lg="3" xs="3" className="m-0">
+                    <div className="blue m-0" />
+                  </Col>
+                  <Col lg="3" xs="3" className="m-0">
+                    <div className="yellow" />
+                  </Col>
+                  <Col lg="3" xs="3" className="m-0">
+                    <div className="red" />
+                  </Col>
+                </Row>
+              </Fade>
             </Container>
           </Col>
         </Row>
@@ -52,13 +57,16 @@ const homepage = ({ data }) => {
                   className="justify-content-center"
                 >
                   <Link to={project.node.fields.slug}>
-                    <Image
-                      fluid={
-                        project.node.frontmatter.thumbnail.childImageSharp.fluid
-                      }
-                      className="mb-5 img-fluid rounded-circle"
-                      alt=""
-                    />
+                    <Fade cascade>
+                      <Image
+                        fluid={
+                          project.node.frontmatter.thumbnail.childImageSharp
+                            .fluid
+                        }
+                        className="mb-5 img-fluid rounded-circle"
+                        alt=""
+                      />
+                    </Fade>
                   </Link>
                 </Col>
               )

@@ -1,0 +1,15 @@
+@import "../variables.scss";
+
+.notfound-container {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  max-width: 100%;
+  h1 {
+    font-weight: bold;
+  }
+  .black-btn {
+    @extend %btn;
+  }
+}
