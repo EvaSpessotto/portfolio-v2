@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Eva Spessotto - Portfolio`,
     description: `Developpeuse web et graphiste juniore`,
-    url: `eva-spessotto.fr`,
+    siteUrl: `https://eva-spessottooooooo.netlify.com/`,
     twitterUsername: "@evaspessotto",
     image: "./static/images/saint-cyp-06-test.jpg",
   },
@@ -58,7 +58,7 @@ module.exports = {
         {
           site {
             siteMetadata {
-              url
+              siteUrl
             }
           }
           allSitePage {
