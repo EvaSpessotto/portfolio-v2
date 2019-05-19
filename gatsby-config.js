@@ -50,20 +50,42 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `Eva Spessotto`,
-    //     short_name: `Eva S`,
-    //     start_url: `/`,
-    //     background_color: `#ffffff`,
-    //     theme_color: `#000000`,
-    //     display: `standalone`,
-    //     icon: `static/favicon.ico`,
-    //     include_favicon: true,
-    //   },
-    // },
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        query: `
+        {
+          site {
+            siteMetadata {
+              url
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+      }`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Eva Spessotto`,
+        short_name: `Eva S`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        icon: `static/favicon.ico`,
+        include_favicon: true,
+      },
+    },
+    `gatsby-plugin-favicon`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
   ],
 }

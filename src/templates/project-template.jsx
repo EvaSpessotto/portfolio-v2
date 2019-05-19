@@ -3,6 +3,7 @@ import "./projectTemplate.scss"
 import { Container, Row, Col } from "reactstrap"
 import Image from "gatsby-image"
 import { graphql } from "gatsby"
+import capitalize from "lodash/capitalize"
 
 import Seo from "../components/Seo/Seo"
 import Layout from "../components/Layout"
@@ -25,7 +26,9 @@ export default function Template({ data }) {
         <Container>
           <Row>
             <Col>
-              <h1 className="mt-5 project-header">{post.frontmatter.title}</h1>
+              <h1 className="mt-5 project-header">
+                {capitalize(post.frontmatter.title)}
+              </h1>
               <p>{post.frontmatter.description}</p>
               <Image
                 fluid={post.frontmatter.devices.childImageSharp.fluid}
@@ -42,7 +45,7 @@ export default function Template({ data }) {
               <Row>
                 <Col>
                   <Container>
-                    <h2 className="project-title"> {item.title}</h2>
+                    <h2 className="project-title">{item.title}</h2>
                     <p>{item.description}</p>
                     <Image
                       fluid={item.image.childImageSharp.fluid}
