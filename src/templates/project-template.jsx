@@ -4,6 +4,7 @@ import { Container, Row, Col } from "reactstrap"
 import Image from "gatsby-image"
 import { graphql } from "gatsby"
 import capitalize from "lodash/capitalize"
+import Fade from "react-reveal/Fade"
 
 import Seo from "../components/Seo/Seo"
 import Layout from "../components/Layout"
@@ -22,42 +23,49 @@ export default function Template({ data }) {
         article
       />
       <div className="project-container">
-        <HeroPost title={post.frontmatter.title.toLowerCase()} />
-        <Container>
-          <Row>
-            <Col>
-              <h1 className="mt-5 project-header">
-                {capitalize(post.frontmatter.title)}
-              </h1>
-              <p>{post.frontmatter.description}</p>
-              <Image
-                fluid={post.frontmatter.devices.childImageSharp.fluid}
-                alt=""
-                className="w-100"
-              />
-            </Col>
-          </Row>
-        </Container>
+        <Fade>
+          <HeroPost title={post.frontmatter.title.toLowerCase()} />
+        </Fade>
 
-        {post.frontmatter.listImages.map(item => {
-          return (
-            <Container fluid className={`container-${item.bgColor} p-5`}>
-              <Row>
-                <Col>
-                  <Container>
-                    <h2 className="project-title">{item.title}</h2>
-                    <p>{item.description}</p>
-                    <Image
-                      fluid={item.image.childImageSharp.fluid}
-                      alt={item.title}
-                      className="w-100"
-                    />
-                  </Container>
-                </Col>
-              </Row>
-            </Container>
-          )
-        })}
+        <Fade>
+          <Container>
+            <Row>
+              <Col>
+                <h1 className="mt-5 project-header">
+                  {capitalize(post.frontmatter.title)}
+                </h1>
+                <p>{post.frontmatter.description}</p>
+                <Image
+                  fluid={post.frontmatter.devices.childImageSharp.fluid}
+                  alt=""
+                  className="w-100"
+                />
+              </Col>
+            </Row>
+          </Container>
+        </Fade>
+
+        <Fade>
+          {post.frontmatter.listImages.map(item => {
+            return (
+              <Container fluid className={`container-${item.bgColor} p-5`}>
+                <Row>
+                  <Col>
+                    <Container>
+                      <h2 className="project-title">{item.title}</h2>
+                      <p>{item.description}</p>
+                      <Image
+                        fluid={item.image.childImageSharp.fluid}
+                        alt={item.title}
+                        className="w-100"
+                      />
+                    </Container>
+                  </Col>
+                </Row>
+              </Container>
+            )
+          })}
+        </Fade>
       </div>
     </Layout>
   )
