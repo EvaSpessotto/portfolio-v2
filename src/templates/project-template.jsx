@@ -18,7 +18,7 @@ export default function Template({ data }) {
       <Seo
         title={post.frontmatter.title}
         description={post.excerpt || "nothing here"}
-        image={post.frontmatter.thumbnail}
+        image={post.frontmatter.thumbnail.childImageSharp.fluid.src}
         pathname={post.fields.slug}
         article
       />
@@ -46,9 +46,13 @@ export default function Template({ data }) {
         </Fade>
 
         <Fade>
-          {post.frontmatter.listImages.map(item => {
+          {post.frontmatter.listImages.map((item, index) => {
             return (
-              <Container fluid className={`container-${item.bgColor} p-5`}>
+              <Container
+                fluid
+                className={`container-${item.bgColor} p-5`}
+                key={index}
+              >
                 <Row>
                   <Col>
                     <Container>
