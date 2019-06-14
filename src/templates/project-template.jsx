@@ -48,31 +48,33 @@ export default function Template({ data }) {
           </Container>
         </Fade>
 
-        <Fade>
-          {post.frontmatter.listImages.map((item, index) => {
-            return (
-              <Container
-                fluid
-                className={`container-${item.bgColor} p-5 mt-5 mb-3`}
-                key={index}
-              >
-                <Row>
-                  <Col>
-                    <Container>
+        {post.frontmatter.listImages.map((item, index) => {
+          return (
+            <Container
+              fluid
+              className={`container-${item.bgColor} p-5 mt-5 mb-3`}
+              key={index}
+            >
+              <Row>
+                <Col>
+                  <Container>
+                    <Fade>
                       <h2 className="project-title">{item.title}</h2>
                       <div className="line" />
+                    </Fade>
+                    <Fade>
                       <Image
                         fluid={item.image.childImageSharp.fluid}
                         alt={item.title}
                         className="w-100"
                       />
-                    </Container>
-                  </Col>
-                </Row>
-              </Container>
-            )
-          })}
-        </Fade>
+                    </Fade>
+                  </Container>
+                </Col>
+              </Row>
+            </Container>
+          )
+        })}
       </div>
     </Layout>
   )

@@ -12,5 +12,5 @@ listImages:
 
   - bgColor: yellow
     image: /images/commit42-blog.png
-    title: test 2
+    title: Blog
 ---
