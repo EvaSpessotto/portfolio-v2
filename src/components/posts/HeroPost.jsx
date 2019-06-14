@@ -1,6 +1,5 @@
 import React from "react"
 import { Parallax } from "react-parallax"
-import { bannerWildhub } from "../../../static/images/banners/banners.js"
 
 const HeroPost = ({ title }) => {
   console.log(title)

@@ -12,7 +12,6 @@ import HeroPost from "../components/posts/HeroPost"
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
-  console.log(post.frontmatter.title)
   return (
     <Layout>
       <Seo
@@ -31,10 +30,14 @@ export default function Template({ data }) {
           <Container>
             <Row>
               <Col>
-                <h1 className="mt-5 project-header">
-                  {capitalize(post.frontmatter.title)}
-                </h1>
-                <p>{post.frontmatter.description}</p>
+                <div className="project-presentation-container">
+                  <h1 className="mt-5 project-header">
+                    {capitalize(post.frontmatter.title)}
+                  </h1>
+                  <p className="project-description">
+                    {post.frontmatter.description}
+                  </p>
+                </div>
                 <Image
                   fluid={post.frontmatter.devices.childImageSharp.fluid}
                   alt=""
@@ -55,13 +58,15 @@ export default function Template({ data }) {
               >
                 <Row>
                   <Col>
-                    <Container>
+                    <Container className="py-5">
                       <h2 className="project-title">{item.title}</h2>
-                      <p>{item.description}</p>
+                      <div className="line mb-5" />
+                      {/* <p>{item.description && item.description}</p> */}
                       <Image
                         fluid={item.image.childImageSharp.fluid}
                         alt={item.title}
                         className="w-100"
+                        className="test mb-5"
                       />
                     </Container>
                   </Col>
@@ -114,7 +119,6 @@ export const pageQuery = graphql`
             }
           }
           title
-          description
           bgColor
         }
       }
