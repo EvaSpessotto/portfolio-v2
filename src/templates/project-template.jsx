@@ -23,7 +23,6 @@ export default function Template({ data }) {
       />
       <div className="project-container">
         <Fade>
-          {/* <HeroPost title={post.frontmatter.title.toLowerCase()} /> */}
           <Image fluid={post.frontmatter.banner.childImageSharp.fluid} />
         </Fade>
 
@@ -39,11 +38,6 @@ export default function Template({ data }) {
                     {post.frontmatter.description}
                   </p>
                 </div>
-                <Image
-                  fluid={post.frontmatter.devices.childImageSharp.fluid}
-                  alt=""
-                  className="w-100"
-                />
               </Col>
             </Row>
           </Container>
