@@ -27,16 +27,21 @@ export default function Template({ data }) {
         </Fade>
 
         <Fade>
-          <Container>
+          <Container className="mt-5">
             <Row>
-              <Col>
-                <div className="project-presentation-container">
-                  <h1 className="mt-5 project-header">
-                    {capitalize(post.frontmatter.title)}
-                  </h1>
-                  <p className="project-description">
-                    {post.frontmatter.description}
-                  </p>
+              <Col className="col-8">
+                <p className="project-description">
+                  {post.frontmatter.description}
+                </p>
+              </Col>
+              <Col className="col-3 offset-1">
+                <h1 className="project-header">{post.frontmatter.title}</h1>
+                <div>
+                  <ul>
+                    <li>Graphiste</li>
+                    <li>Illustratrice</li>
+                    <li>Développeuse web</li>
+                  </ul>
                 </div>
               </Col>
             </Row>
@@ -48,20 +53,18 @@ export default function Template({ data }) {
             return (
               <Container
                 fluid
-                className={`container-${item.bgColor} p-5`}
+                className={`container-${item.bgColor} p-5 mt-5 mb-3`}
                 key={index}
               >
                 <Row>
                   <Col>
-                    <Container className="py-5">
+                    <Container>
                       <h2 className="project-title">{item.title}</h2>
-                      <div className="line mb-5" />
-                      {/* <p>{item.description && item.description}</p> */}
+                      <div className="line" />
                       <Image
                         fluid={item.image.childImageSharp.fluid}
                         alt={item.title}
                         className="w-100"
-                        className="test mb-5"
                       />
                     </Container>
                   </Col>

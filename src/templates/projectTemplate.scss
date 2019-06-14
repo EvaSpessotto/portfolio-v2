@@ -14,6 +14,9 @@
   .container-blue {
     background: $blue;
   }
+  .container-white {
+    background: white;
+  }
   .container-red {
     background: $red;
   }
@@ -27,5 +30,6 @@
   .line {
     @extend %line;
     max-width: 30%;
+    margin-bottom: 5rem;
   }
 }
