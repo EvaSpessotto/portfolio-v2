@@ -10,7 +10,6 @@ description: >-
   les nombreux clichés afin de trouver votre prochain projet photo !
 thumbnail: /images/commit42-thumbnail.jpg
 banner: /images/commit42-banner.jpg
-devices: /images/commit42-devices.jpg
 listImages:
   - bgColor: white
     image: /images/commit42-home.png
@@ -21,5 +20,8 @@ listImages:
   - bgColor: white
     image: /images/commit42-articles.jpg
     title: Article
+  - bgColor: red
+    image: /images/commit42-articles.jpg
+    title: Plop
 ---
 
