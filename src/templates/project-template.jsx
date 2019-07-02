@@ -102,13 +102,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        devices {
-          childImageSharp {
-            fluid(maxWidth: 900) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         description
         listImages {
           image {
