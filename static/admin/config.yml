@@ -21,7 +21,6 @@ collections:
       - { label: Description, name: description, widget: text }
       - { label: Thumbnail, name: thumbnail, widget: image }
       - { label: Banner Image, name: banner, widget: image }
-      - { label: Devices Image, name: devices, widget: image }
       - {
           label: Images,
           name: listImages,
