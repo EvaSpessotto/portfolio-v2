@@ -8,16 +8,16 @@ description: >-
   en photo ou encore des tutoriels pour retoucher vos clichés. Besoin
   d’inspiration ? La galerie est là pour ça, n’hésitez pas à vous perdre dans
   les nombreux clichés afin de trouver votre prochain projet photo !
-thumbnail: /images/cover-photomania.png
-banner: /images/banner-photomania.png
-devices: /images/devices-photomania.png
+thumbnail: /images/commit42-thumbnail.jpg
+banner: /images/commit42-banner.jpg
+devices: /images/commit42-devices.jpg
 listImages:
-  - bgColor: blue
-    image: /images/pages-photomania.png
-    title: Test
   - bgColor: white
-    image: /images/macbook-photomania.png
-    title: test 2
+    image: /images/commit42-home.png
+    title: Home
+  - bgColor: yellow
+    image: /images/commit42-blog.png
+    title: Blog
   - bgColor: white
     image: /images/commit42-articles.jpg
     title: Article
