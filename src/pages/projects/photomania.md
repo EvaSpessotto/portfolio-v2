@@ -9,15 +9,17 @@ description: >-
   d’inspiration ? La galerie est là pour ça, n’hésitez pas à vous perdre dans
   les nombreux clichés afin de trouver votre prochain projet photo !
 thumbnail: /images/cover-photomania.png
-cover: /images/cover-photomania.png
 banner: /images/banner-photomania.png
 devices: /images/devices-photomania.png
 listImages:
   - bgColor: blue
     image: /images/pages-photomania.png
     title: Test
-
   - bgColor: white
     image: /images/macbook-photomania.png
     title: test 2
+  - bgColor: white
+    image: /images/commit42-articles.jpg
+    title: Article
 ---
+
