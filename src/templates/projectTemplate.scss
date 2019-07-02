@@ -1,29 +1,30 @@
 @import "../variables.scss";
 
 .project-container {
-  .project-presentation-container {
+  .header-container {
     max-width: 70%;
-    margin: 0 auto;
-  }
-  .project-header {
-    font-weight: bold;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
   }
   .project-title {
     font-weight: bold;
+    font-size: 4rem;
   }
-  .container-blue {
-    background: $blue;
+  .project-heading {
+    font-weight: bold;
   }
-  .container-white {
-    background: white;
-  }
-  .container-red {
-    background: $red;
-  }
-  .container-yellow {
-    background: $yellow;
-    .test {
-      box-shadow: 0px 40px 20px 0px rgba(0, 0, 0, 0.2);
+  .container-- {
+    &blue {
+      background: $blue;
+    }
+    &yellow {
+      background: $yellow;
+    }
+    &red {
+      background: $red;
+    }
+    &white {
+      background: white;
     }
   }
 

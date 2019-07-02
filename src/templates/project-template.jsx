@@ -21,21 +21,16 @@ export default function Template({ data }) {
         pathname={post.fields.slug}
         article
       />
-      <div className="project-container">
+      <div className="project-container mb-5">
         <Fade>
           <Image fluid={post.frontmatter.banner.childImageSharp.fluid} />
         </Fade>
 
         <Fade>
-          <Container className="mt-5">
+          <Container className="header-container">
             <Row>
-              <Col className="col-8">
-                <p className="project-description">
-                  {post.frontmatter.description}
-                </p>
-              </Col>
-              <Col className="col-3 offset-1">
-                <h1 className="project-header">{post.frontmatter.title}</h1>
+              <Col className="col-4">
+                <h1 className="project-title">{post.frontmatter.title}</h1>
                 <div>
                   <ul>
                     <li>Graphiste</li>
@@ -43,6 +38,11 @@ export default function Template({ data }) {
                     <li>Développeuse web</li>
                   </ul>
                 </div>
+              </Col>
+              <Col className="col-8">
+                <p className="project-description">
+                  {post.frontmatter.description}
+                </p>
               </Col>
             </Row>
           </Container>
@@ -52,14 +52,14 @@ export default function Template({ data }) {
           return (
             <Container
               fluid
-              className={`container-${item.bgColor} p-5 mt-5 mb-3`}
+              className={`container--${item.bgColor} p-5 mt-5 mb-3`}
               key={index}
             >
               <Row>
                 <Col>
                   <Container>
                     <Fade>
-                      <h2 className="project-title">{item.title}</h2>
+                      <h2 className="project-heading">{item.title}</h2>
                       <div className="line" />
                     </Fade>
                     <Fade>
