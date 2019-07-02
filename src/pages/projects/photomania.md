@@ -24,4 +24,3 @@ listImages:
     image: /images/commit42-articles.jpg
     title: Plop
 ---
-
